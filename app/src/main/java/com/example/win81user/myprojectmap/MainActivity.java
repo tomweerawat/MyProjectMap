@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Bind(R.id.edtpass) EditText edtpasswd;
     @Bind(R.id.btnlogin) Button btnlogin;
     @Bind(R.id.tvregis) TextView tvregis;
-    @Bind(R.id.btn_simple) Button btn_simple;
+
 
 
     @OnClick(R.id.tvregis) void add(){
@@ -113,14 +113,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-
-
-        } else if (id == R.id.nav_slideshow) {
             Toast.makeText(this,"Show Data!",Toast.LENGTH_LONG).show();
             Intent i = new Intent(this,ShowDataListView.class);
             this.startActivity(i);
 
+
+        } else if (id == R.id.nav_slideshow) {
+            Toast.makeText(this,"Direction!!",Toast.LENGTH_LONG).show();
+            Intent i = new Intent(this,SimpleDirectionActivity.class);
+            this.startActivity(i);
+
         } else if (id == R.id.nav_manage) {
+            Toast.makeText(this,"Webboard!!",Toast.LENGTH_LONG).show();
+            Intent i = new Intent(this,ScrollingActivity.class);
+            this.startActivity(i);
 
         } else if (id == R.id.nav_share) {
 
@@ -129,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+       drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }

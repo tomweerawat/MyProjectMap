@@ -28,6 +28,7 @@
         <activity android:name=".AlternativeDirectionActivity"></activity>
         <activity android:name=".SimpleDirectionActivity"></activity>
         <activity android:name=".ShowDirection"></activity>
+        <activity android:name=".ScrollingActivity"></activity>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
